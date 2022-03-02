@@ -33,5 +33,4 @@ public class Solution_01 {
 		}
 		return true; // 나눠지지 않으면 소수
 	}
-
 }
