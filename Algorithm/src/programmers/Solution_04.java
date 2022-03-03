@@ -50,7 +50,7 @@ public class Solution_04 {
 		return answer.toString();
 	}
 	
-	// 거리 체크 메소드
+	// 거리 체크
 	private static int distance(int pos, int n) {
 		int left_distance = Math.abs(board[pos-1][0] - board[n-1][0]);
 		int right_distance = Math.abs(board[pos-1][1] - board[n-1][1]);
