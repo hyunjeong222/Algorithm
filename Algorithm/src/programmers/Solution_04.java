@@ -1,8 +1,7 @@
 package programmers;
 
-// top-down 방식
-// Summer/Winter Coding(~2018) > 점프와 순간 이동
-// 사용해야 하는 건전지 사용량의 최솟값을 return
+// 2020 카카오 인턴십 > 키패드 누르기
+// 사용한 손가락을 L 또는 R로 표현하여 순서대로 이어붙여 문자열 형태로 return
 public class Solution_04 {
 	
 	public static void main(String[] args) {
