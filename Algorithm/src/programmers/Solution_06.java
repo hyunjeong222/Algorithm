@@ -84,7 +84,7 @@ public class Solution_06 {
         	answer = answer.substring(0,answer.length()-1);
         }
         // 7단계 new_id의 길이가 2자 이하라면, new_id의 마지막 문자를 new_id의 길이가 3이 될 때까지 반복해서 끝에 붙임
-        String last = answer.charAt(answer.length()-1) + "";
+        String last = answer.charAt(answer.length()-1) + ""; // 마지막 문자열
         if (answer.length() <= 2) {
         	while (answer.length() < 3) {
         		answer += last;
@@ -144,9 +144,9 @@ public class Solution_06 {
         	answer.deleteCharAt(answer.length()-1);
         }
         // 7단계 new_id의 길이가 2자 이하라면, new_id의 마지막 문자를 new_id의 길이가 3이 될 때까지 반복해서 끝에 붙임
-        String last = answer.charAt(answer.length()-1) + "";
+        String last = answer.charAt(answer.length()-1) + ""; // 마지막 문자열
         if (answer.length() <= 2) {
-        	while (answer.length() < 3) {
+        	while (answer.length() < 3)
 				answer.append(last + "");
 			}
         }
