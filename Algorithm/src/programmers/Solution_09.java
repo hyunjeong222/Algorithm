@@ -37,13 +37,13 @@ public class Solution_09 {
 		}
 		for (String s : menu.keySet()) {
 			for (int i = 0; i < course.length; i++) {
-				if (course[i] == s.length() && max[i] != 1 && menu.get(s) == max[i]) {
-					list.add(s);
+				if (course[i] == s.length() && max[i] != 1 && menu.get(s) == max[i]) { // 조합의 길이가 같고 2명 이상의 손님으로 부터 주문되었으며 가장 많이 선택된 메뉴인 경우
+					list.add(s); // 리스트에 추가
 				}
 			}
 		}		
 
-		Collections.sort(list);
+		Collections.sort(list); // 사전순으로 정렬, 오름차순
 		answer = new String[list.size()];
 		for (int i = 0; i < list.size(); i++) {
 			answer[i] = list.get(i);
