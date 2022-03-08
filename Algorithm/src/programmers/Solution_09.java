@@ -62,7 +62,8 @@ public class Solution_09 {
 			max[j] = Math.max(max[j], menu.get(s)); // 각 개수별 최대 선택 횟수를 저장
 			return;
 		}
-
+		
+		// 재귀함수를 이용한 조합
 		for (int i = cursor; i < str.length(); i++) {
 			visited[i] = true;
 			comb(i + 1, cnt + 1, s + str.charAt(i), j, n);
