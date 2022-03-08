@@ -29,7 +29,7 @@ public class Solution_09 {
 			char[] arr = orders[i].toCharArray();
 			Arrays.sort(arr); // 오름차순으로 정렬
 			str = String.copyValueOf(arr); // 문자열 형태로 변경
-			
+
 			for (int j = 0; j < course.length; j++) {
 				visited = new boolean[str.length()];
 				comb(0, 0, "", j, course[j]);
@@ -41,7 +41,7 @@ public class Solution_09 {
 					list.add(s); // 리스트에 추가
 				}
 			}
-		}		
+		}      
 
 		Collections.sort(list); // 사전순으로 정렬, 오름차순
 		answer = new String[list.size()];
