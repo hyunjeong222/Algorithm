@@ -3,8 +3,7 @@ package programmers;
 // 동적계획법(Dynamic Programming) > N으로 표현
 // N과 사칙연산만 사용해서 표현 할 수 있는 방법 중 N 사용횟수의 최솟값을 return
 // 최솟값이 8보다 크면 -1을 return
-// dfs
-public class Solution_10 {
+public class Solution_10 { // dfs
 	public static void main(String[] args) {
 		int N = 5; // 사용할 수
 		int number = 12; // 만들어야 하는 수
