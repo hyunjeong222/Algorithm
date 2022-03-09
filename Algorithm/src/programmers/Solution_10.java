@@ -36,5 +36,4 @@ public class Solution_10 {
 			dfs(N,number,i+count,sum/nn);
 		}
 	}
-
 }
