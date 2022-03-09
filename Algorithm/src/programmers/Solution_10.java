@@ -11,7 +11,7 @@ public class Solution_10 {
 	}
 	static int answer;
 	public static int solution(int N, int number) {
-		answer = -1; // N 사용횟수의 최솟값
+		answer = -1; // N 사용횟수의 최솟값, -1로 변경
 		dfs(N,number,0,0);
 		return answer;
 	}
