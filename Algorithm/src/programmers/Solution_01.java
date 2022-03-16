@@ -2,6 +2,7 @@ package programmers;
 
 // Summer/Winter Coding(~2018) > 소수 만들기
 // nums에 있는 숫자들 중 서로 다른 3개를 골라 더했을 때 소수가 되는 경우의 개수를 return
+
 public class Solution_01 {
 	
 	public static void main(String[] args) {
