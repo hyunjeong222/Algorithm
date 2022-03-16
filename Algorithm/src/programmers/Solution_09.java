@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+
 // 2021 KAKAO BLIND RECRUITMENT > 메뉴 리뉴얼
 // "스카피"가 새로 추가하게 될 코스요리의 메뉴 구성을 문자열 형태로 배열에 담아 사전 순으로 오름차순 정렬해서 return
 // 만약 가장 많이 함께 주문된 메뉴 구성이 여러 개라면, 모두 배열에 담아 return
@@ -15,7 +16,7 @@ public class Solution_09 {
 	}
 	static String str; // 만들어진 조합
 	static HashMap<String, Integer> menu; // 모든 메뉴의 조합, 선택 횟수
-	static boolean visited[];; // 조합에 뽑혔는지를 확인할 배열
+	static boolean visited[]; // 조합에 뽑혔는지를 확인할 배열
 	static int max[]; // course[j]번째를 고르는 경우의 수 중, 가장 많이 선택된 횟수를 저장 할 배열
 
 	public static String[] solution(String[] orders, int[] course) {
