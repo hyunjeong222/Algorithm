@@ -37,19 +37,3 @@ public class Solution_10 { // dfs
 		}
 	}
 }
-
-/*
-public class Solution_10 { // dp
-	public static void main(String[] args) {
-		int N = 5; // 사용할 수
-		int number = 12; // 만들어야 하는 수
-		System.out.println(solution(N,number));
-	}
-	
-	public static int solution(int N, int number) {
-		int answer = 0;
-		return answer;
-	}
-	
-}
-*/
