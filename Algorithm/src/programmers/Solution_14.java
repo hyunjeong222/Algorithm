@@ -50,7 +50,7 @@ public class Solution_14 {
 		}
 	}
 	
-	// 올바른 괄호 
+	// 올바른 괄호 판별
 	private static boolean check(String p) {
 		Stack<Character> stack = new Stack<>();
 		for (int i = 0; i < p.length(); i++) {
