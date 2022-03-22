@@ -51,13 +51,8 @@ public class Solution_14 {
 			return u + dfs(v); // u에 v에 대해 재귀한 문자열 붙이기
 		}
 	}
-<<<<<<< HEAD
 
-	// 올바른 괄호 판별 
-=======
-	
 	// 올바른 괄호 판별
->>>>>>> branch 'main' of https://github.com/hyunjeong222/Algorithm.git
 	private static boolean check(String p) {
 		Stack<Character> stack = new Stack<>();
 		for (int i = 0; i < p.length(); i++) {
