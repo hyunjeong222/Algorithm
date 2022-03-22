@@ -38,11 +38,13 @@ public class Solution_14 {
 		if (!check(u)) { // u가 올바른 괄호 쌍이 아니라면
 			String temp = "(" + dfs(v); // 빈 문자열에 첫 번째 문자로 '(' 붙이고 문자열 v에 대해 재귀
 			temp += ")"; // ')' 다시 붙이기
-			// u의 첫 번째와 마지막 문자 제거, 나머지 문자열 괄호 뒤집기
+			// u의 첫 번째와 마지막 문자 제거
 			u = u.substring(1, u.length()-1);
+			// 나머지 문자열의 괄호 방향 뒤집기
 			u = u.replace("(", ".");
 			u = u.replace(")", "(");
 			u = u.replace(".", ")");
+			// 문자열 붙이기
 			temp += u;
 			return temp;
 		} else { // 올바른 괄호라면
