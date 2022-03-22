@@ -36,8 +36,9 @@ public class Solution_14 {
 			}
 		}
 		if (!check(u)) { // u가 올바른 괄호 쌍이 아니라면
-			String temp = "(" + dfs(v);
-			temp += ")";
+			String temp = "(" + dfs(v); // 빈 문자열에 첫 번째 문자로 '(' 붙이고 문자열 v에 대해 재귀
+			temp += ")"; // ')' 다시 붙이기
+			// u의 첫 번째와 마지막 문자 제거, 나머지 문자열 괄호 뒤집기
 			u = u.substring(1, u.length()-1);
 			u = u.replace("(", ".");
 			u = u.replace(")", "(");
@@ -45,10 +46,11 @@ public class Solution_14 {
 			temp += u;
 			return temp;
 		} else { // 올바른 괄호라면
-			return u + dfs(v);
+			return u + dfs(v); // u에 v에 대해 재귀한 문자열 붙이기
 		}
 	}
-
+	
+	// 올바른 괄호 
 	private static boolean check(String p) {
 		Stack<Character> stack = new Stack<>();
 		for (int i = 0; i < p.length(); i++) {
