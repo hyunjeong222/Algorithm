@@ -3,7 +3,6 @@ package programmers;
 // 2018 KAKAO BLIND RECRUITMENT > [1차] 다트 게임
 // 0~10의 정수와 문자 S, D, T, *, #로 구성된 문자열이 입력될 시 총점수 return
 public class Solution_15 {
-
 	public static void main(String[] args) {
 		String dartResult = "1S2D*3T";
 		System.out.println(solution(dartResult));
