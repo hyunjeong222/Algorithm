@@ -36,8 +36,8 @@ public class Solution_15 {
 					score[idx - 1] *= -1;
 				} else {
 					score[idx - 1] *= 2; //  해당 점수와 
-					if (idx - 2 >= 0) { // 바로 전에 얻은 점수를 각 2배
-						score[idx - 2] *= 2;
+					if (idx - 2 >= 0) { // 바로 전에 얻은 점수를
+						score[idx - 2] *= 2; // 각 2배
 					}
 				}
 			}
