@@ -20,20 +20,21 @@ public class Solution_16 {
         return answer;
     }
 
+	// 올바른 괄호 체크 메소드
 	private static boolean check(String s) {
-		Stack<Character> stack = new Stack<>();
+		Stack<Character> stack = new Stack<>(); // 올바른 괄호 판별을 위해 stack 선언
 		for (int i = 0; i < s.length(); i++) {
 			char c = s.charAt(i);
-			if (stack.isEmpty()) {
+			if (stack.isEmpty()) { // stack이 비어있으면 일단 괄호 추가
 				stack.push(c);
-			} else if (c == ')' && stack.peek() == '(') {
-				stack.pop();
+			} else if (c == ')' && stack.peek() == '(') { // 괄호 쌍이라면
+				stack.pop(); // stack에서 제거
             } else if (c == '}' && stack.peek() == '{') {
             	stack.pop();
             } else if (c == ']' && stack.peek() == '[') {
             	stack.pop();
-            } else {
-            	stack.push(c);
+            } else { // 아니라면
+            	stack.push(c); // stack 추가
             }
 		}
 		if (stack.isEmpty()) return true; // 올바른 문자열이면 stack이 빔
