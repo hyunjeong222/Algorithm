@@ -9,16 +9,16 @@ public class Solution_16 {
 		String s = "[](){}";
 		System.out.println(solution(s));
 	}
-    
+
 	public static int solution(String s) {
-        int answer = 0; // x의 개수
-        String new_s = s; // 새롭게 만들 문자열, 시작은 s
-        for (int i = 0; i < s.length(); i++) {
+		int answer = 0; // x의 개수
+		String new_s = s; // 새롭게 만들 문자열, 시작은 s
+		for (int i = 0; i < s.length(); i++) {
 			if (check(new_s)) answer++; // 올바른 문자열이라면 x개수 증가
 			new_s = new_s.substring(1, s.length()) + new_s.charAt(0); // 괄호를 회전한 모습
 		}
-        return answer;
-    	}
+		return answer;
+	}
 
 	// 올바른 괄호 체크 메소드
 	private static boolean check(String s) {
@@ -29,15 +29,16 @@ public class Solution_16 {
 				stack.push(c);
 			} else if (c == ')' && stack.peek() == '(') { // 괄호 쌍이라면
 				stack.pop(); // stack에서 제거
-            		} else if (c == '}' && stack.peek() == '{') {
-            			stack.pop();
-            		} else if (c == ']' && stack.peek() == '[') {
-            			stack.pop();
-            		} else { // 아니라면
-            			stack.push(c); // stack 추가
-            		}
+			} else if (c == '}' && stack.peek() == '{') {
+				stack.pop();
+			} else if (c == ']' && stack.peek() == '[') {
+				stack.pop();
+			} else { // 아니라면
+				stack.push(c); // stack 추가
+			}
 		}
-		if (stack.isEmpty()) return true; // 올바른 문자열이면 stack이 빔
+		if (stack.isEmpty()) return true; // new_s가 올바른 괄호 문자열이라면 stack이 빔
 		return false;
 	}
+	
 }
