@@ -18,7 +18,7 @@ public class Solution_16 {
 			new_s = new_s.substring(1, s.length()) + new_s.charAt(0); // 괄호를 회전한 모습
 		}
         return answer;
-    }
+    	}
 
 	// 올바른 괄호 체크 메소드
 	private static boolean check(String s) {
@@ -29,13 +29,13 @@ public class Solution_16 {
 				stack.push(c);
 			} else if (c == ')' && stack.peek() == '(') { // 괄호 쌍이라면
 				stack.pop(); // stack에서 제거
-            } else if (c == '}' && stack.peek() == '{') {
-            	stack.pop();
-            } else if (c == ']' && stack.peek() == '[') {
-            	stack.pop();
-            } else { // 아니라면
-            	stack.push(c); // stack 추가
-            }
+            		} else if (c == '}' && stack.peek() == '{') {
+            			stack.pop();
+            		} else if (c == ']' && stack.peek() == '[') {
+            			stack.pop();
+            		} else { // 아니라면
+            			stack.push(c); // stack 추가
+            		}
 		}
 		if (stack.isEmpty()) return true; // 올바른 문자열이면 stack이 빔
 		return false;
