@@ -79,7 +79,7 @@ public class Solution_18 {
         n = maps.length;
         m = maps[0].length;
         visited = new int[n][m];
-        bfs(0,0,maps); // 현재위치, 게임 
+        bfs(0,0,maps); // 현재위치, 게임 맵
         int answer = visited[n-1][m-1]; // 칸의 최솟값은 맵의 마지막 값
         return answer == 0 ? -1 : answer; // answer이 0이면 도착할 수 없는 경우, 0이 아니라면 최솟값 return
     }
@@ -94,7 +94,7 @@ public class Solution_18 {
 
 			if (p_q.x == n - 1 && p_q.y == m - 1) return visited[p_q.x][p_q.y]; // 종료조건
 
-			for (int i = 0; i < 4; i++) { // 
+			for (int i = 0; i < 4; i++) { // 동서남북
 				// 다음좌표
 				int nx = p_q.x + dx[i];
 				int ny = p_q.y + dy[i];
