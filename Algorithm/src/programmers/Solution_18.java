@@ -86,7 +86,7 @@ public class Solution_18 {
 	
 	private static int bfs(int x, int y, int[][] maps) {
 		Queue<pos> q = new LinkedList<>();
-		q.offer(new pos(x, y));
+		q.offer(new pos(x, y)); // queue 현재 위치 담기
 		visited[x][y] = 1; // 현재위치 값 1
 		
 		while (!q.isEmpty()) {
@@ -94,15 +94,15 @@ public class Solution_18 {
 			
 			if (p_q.x == n - 1 && p_q.y == m - 1) return visited[p_q.x][p_q.y]; // 종료조건
 			
-			for (int i = 0; i < 4; i++) {
-				// 다음 좌표
+			for (int i = 0; i < 4; i++) { // 
+				// 다음좌표
 				int nx = p_q.x + dx[i];
 				int ny = p_q.y + dy[i];
 				
-				if (nx >= 0 && ny >= 0 && nx < n && ny < m) {
-					if (maps[nx][ny] == 1 && visited[nx][ny] == 0) {
+				if (nx >= 0 && ny >= 0 && nx < n && ny < m) { // 범위 안에 값이 존재하고
+					if (maps[nx][ny] == 1 && visited[nx][ny] == 0) { // 방문하지 않았고, 벽이 없는 자리라면
 						visited[nx][ny] = visited[p_q.x][p_q.y] + 1; // 다음 좌표 값은 현재 좌표 값 + 1
-						q.offer(new pos(nx, ny));
+						q.offer(new pos(nx, ny)); // queue에 다음위치
 					}
 				}
 			}
