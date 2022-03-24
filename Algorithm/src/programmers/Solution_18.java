@@ -17,36 +17,36 @@ public class Solution_18 {
 		int x;
 		int y;
 		int cnt;
-		 public pos(int x, int y, int cnt) {
-			 this.x = x;
-			 this.y = y;
-			 this.cnt = cnt;
-		 }
+		public pos(int x, int y, int cnt) {
+			this.x = x;
+			this.y = y;
+			this.cnt = cnt;
+		}
 	}
 	static boolean[][] visited; // 방문 체크
 	static int n, m; // 가로, 세로
 	public static int solution(int[][] maps) {
-        n = maps.length;
-        m = maps[0].length;
-        visited = new boolean[n][m];
-        return  bfs(0,0,maps); // 현재위치, 게임 맵
-    }
-	
+		n = maps.length;
+		m = maps[0].length;
+		visited = new boolean[n][m];
+		return  bfs(0,0,maps); // 현재위치, 게임 맵
+	}
+
 	private static int bfs(int x, int y, int[][] maps) {
 		Queue<pos> q = new LinkedList<>();
 		q.offer(new pos(x, y, 1)); // queue에 현재 위치 + 시작 칸의 개수 담기
 		visited[x][y] = true;
-		
+
 		while (!q.isEmpty()) {
 			pos p_q = q.poll();
-			
+
 			if (p_q.x == n - 1 && p_q.y == m - 1) return p_q.cnt; // 종료조건
-			
+
 			for (int i = 0; i < 4; i++) { // 동서남북
 				// 다음좌표
 				int nx = p_q.x + dx[i];
 				int ny = p_q.y + dy[i];
-				
+
 				if (nx >= 0 && ny >= 0 && nx < n && ny < m) { // 범위 안에 값이 존재하고
 					if (maps[nx][ny] == 1 && !visited[nx][ny]) { // 방문하지 않았고, 벽이 없는 자리라면
 						visited[nx][ny] = true; // 방문 배열 체크
@@ -83,22 +83,22 @@ public class Solution_18 {
         int answer = visited[n-1][m-1]; // 칸의 최솟값은 맵의 마지막 값
         return answer == 0 ? -1 : answer; // answer이 0이면 도착할 수 없는 경우, 0이 아니라면 최솟값 return
     }
-	
+
 	private static int bfs(int x, int y, int[][] maps) {
 		Queue<pos> q = new LinkedList<>();
 		q.offer(new pos(x, y)); // queue 현재 위치 담기
 		visited[x][y] = 1; // 현재위치 값 1
-		
+
 		while (!q.isEmpty()) {
 			pos p_q = q.poll();
-			
+
 			if (p_q.x == n - 1 && p_q.y == m - 1) return visited[p_q.x][p_q.y]; // 종료조건
-			
+
 			for (int i = 0; i < 4; i++) { // 
 				// 다음좌표
 				int nx = p_q.x + dx[i];
 				int ny = p_q.y + dy[i];
-				
+
 				if (nx >= 0 && ny >= 0 && nx < n && ny < m) { // 범위 안에 값이 존재하고
 					if (maps[nx][ny] == 1 && visited[nx][ny] == 0) { // 방문하지 않았고, 벽이 없는 자리라면
 						visited[nx][ny] = visited[p_q.x][p_q.y] + 1; // 다음 좌표 값은 현재 좌표 값 + 1
