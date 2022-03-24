@@ -64,7 +64,7 @@ public class Solution_18 {
 	}
 	static int[] dx = {-1,1,0,0}; // 상하
 	static int[] dy = {0,0,-1,1}; // 좌우
-	// 좌표를 
+	// 좌표를 저장 할 메소드
 	static class pos {
 		int x;
 		int y;
