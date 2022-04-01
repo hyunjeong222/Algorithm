@@ -33,24 +33,29 @@ public class Solution_20 {
 		int r2 = query[2]-1;
 		int c2 = query[3]-1;
 
-		int temp = matrix[r1][c1];
-		int min = temp;
+		int temp = matrix[r1][c1]; // 시작위치 값 임시 저장
+		int min = temp; // 최솟값
+		// 왼쪽 아래 -> 위
 		for (int i = r1; i < r2; i++) {
 			matrix[i][c1] = matrix[i+1][c1];
 			if (min > matrix[i][c1]) min = matrix[i][c1];
 		}
+		// 아래쪽 오른 -> 왼
 		for (int i = c1; i < c2; i++) {
 			matrix[r2][i] = matrix[r2][i+1];
 			if (min > matrix[r2][i]) min = matrix[r2][i];
 		}
+		// 오른쪽 위 -> 아래
 		for (int i = r2; i > r1; i--) {
 			matrix[i][c2] = matrix[i-1][c2];
 			if (min > matrix[i][c2]) min = matrix[i][c2];
 		}
+		// 위쪽 왼 -> 오른
 		for (int i = c2; i > c1; i--) {
 			matrix[r1][i] = matrix[r1][i-1];
 			if (min > matrix[r1][i]) min =matrix[r1][i];
 		}
+		// 마지막 값 이동
 		matrix[r1][c1+1] = temp;
 		return min;
 	}
