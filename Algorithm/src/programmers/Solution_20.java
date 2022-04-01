@@ -2,6 +2,8 @@ package programmers;
 
 import java.util.Arrays;
 
+// 2021 Dev-Matching: 웹 백엔드 개발자(상반기) > 행렬 테두리 회전하기
+// 각 회전들을 배열에 적용한 뒤, 그 회전에 의해 위치가 바뀐 숫자들 중 가장 작은 숫자들을 순서대로 배열에 담아 return
 public class Solution_20 {
 	public static void main(String[] args) {
 		int rows = 6;
