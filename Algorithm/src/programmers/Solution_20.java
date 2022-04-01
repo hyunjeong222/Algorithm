@@ -11,18 +11,18 @@ public class Solution_20 {
 		int[][] queries = {{2,2,5,4},{3,3,6,6},{5,1,6,3}};
 		System.out.println(Arrays.toString(solution(rows, columns, queries)));
 	}
-	static int[][] matrix;
+	static int[][] matrix; // 행렬
 	public static int[] solution(int rows, int columns, int[][] queries) {
-		int[] answer = new int[queries.length];
-		matrix = new int[rows][columns];
+		int[] answer = new int[queries.length];  // 정답 배열
+		matrix = new int[rows][columns]; // 행렬 생성
 		int num = 1;
-		for (int i = 0; i < rows; i++) { 
+		for (int i = 0; i < rows; i++) {  // 행렬 초기화
 			for (int j = 0; j < columns; j++) {
 				matrix[i][j] = num++;
 			}
 		}
 		for (int i = 0; i < queries.length; i++) {
-			answer[i] = rotate(queries[i]);
+			answer[i] = rotate(queries[i]); // 회전
 		}
 		return answer;
 	}
