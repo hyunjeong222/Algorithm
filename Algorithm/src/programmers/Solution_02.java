@@ -21,6 +21,14 @@ public class Solution_02 {
 		/*
 		StringBuilder answer = new StringBuilder("");
 		String first = s.charAt(0) + "";
+		answer.append(first.toUpperCase() + ""); // 첫 문자는 대문자
+		for (int i = 1; i < s.length(); i++) { // 첫 문자 제외하고 그 다음 문자부터 탐색
+			String now = s.charAt(i) + "";
+			if (now.equals(" ")) answer.append(" ");
+			else if (s.charAt(i - 1) == ' ') answer.append(now.toUpperCase()); // 전 문자열이 공백이면 대문자
+			else answer.append(now.toLowerCase());
+		}
+		return answer.toString();
 		*/
 	}
 
