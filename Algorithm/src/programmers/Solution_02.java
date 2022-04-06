@@ -18,6 +18,10 @@ public class Solution_02 {
 			isCheck = str.equals(" ") ? true : false; // str이 공백이면 플래그 true
 		}
 		return answer;
+		/*
+		StringBuilder answer = new StringBuilder("");
+		String first = s.charAt(0) + "";
+		*/
 	}
 
 }
